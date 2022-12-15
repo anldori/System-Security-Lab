@@ -1,6 +1,6 @@
 # Wazuh
 
-# Table of Contents
+## Table of Contents
 
 * [Cài đặt Wazuh](#installation)
 * [Thêm agents vào Wazuh](#agent_adding)
