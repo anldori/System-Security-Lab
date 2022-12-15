@@ -1,5 +1,8 @@
 # Wazuh
 
+* [Cài đặt Wazuh](#installation)
+
+
 ## Cài đặt Wazuh
 
 ```sh
