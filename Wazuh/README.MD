@@ -1,9 +1,9 @@
 # Wazuh
 
 * [Cài đặt Wazuh](#installation)
-* [Thêm agents vào Wazuh](#agentadding)
+* [Thêm agents vào Wazuh](#agent_adding)
 
-
+<a name="installation"></a>
 ## Cài đặt Wazuh
 
 ```sh
@@ -38,6 +38,7 @@ Truy cập trang dashboard của Wazuh và đăng nhập với username, passwor
 
 ![image](https://user-images.githubusercontent.com/101538840/207830677-342b485c-3712-4035-a3cc-e239ebfbf2c8.png)
 
+<a name="agent_adding"></a>
 ## Thêm agents vào Wazuh
 
 Mở các port cần thiết cho Wazuh Manager:
