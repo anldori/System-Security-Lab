@@ -11,8 +11,14 @@ Thử nghiệm trên CentOS 7
 15/12/2022 04:56:56 INFO: --- Summary ---
 15/12/2022 04:56:56 INFO: You can access the web interface https://<wazuh-dashboard-ip>
     User: admin
-    Password: UaR.M0R92UbDXo84ap+RvGwRerti9Ion
+    Password: 5hF7G0adjFcHbmSC14HqYm7sA6rohi+q
 15/12/2022 04:56:56 INFO: Installation finished.
+```
+
+Lấy các username và password cần thiết:
+
+```sh
+[root@localhost ~]# sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
 ```
 
 Mở port 80 và 443:
@@ -51,3 +57,8 @@ Tiến hành thêm agent bằng cách nhấn dấu xổ xuống và chọn Agent
 ![image](https://user-images.githubusercontent.com/101538840/207831695-737a6a9b-3b3f-420c-88ca-25b68fc5cc37.png)
 
 Làm theo hướng dẫn ở bước 4 và bước 5.
+
+Quay trở lại menu Agents, ta thấy đã thêm agent mới thành công:
+
+![image](https://user-images.githubusercontent.com/101538840/207864082-f2e2f41f-e9b0-49f3-bedf-fbc4dd359f49.png)
+
