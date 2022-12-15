@@ -29,3 +29,25 @@ success
 Truy cập trang dashboard của Wazuh và đăng nhập với username, password đã cho:
 
 ![image](https://user-images.githubusercontent.com/101538840/207830677-342b485c-3712-4035-a3cc-e239ebfbf2c8.png)
+
+## Thêm agents vào Wazuh
+
+Mở các port cần thiết cho Wazuh Manager:
+
+```sh
+[root@localhost bin]# firewall-cmd --zone=public --add-port=1514/tcp --permanent
+[root@localhost bin]# firewall-cmd --zone=public --add-port=1514/udp --permanent
+[root@localhost bin]# firewall-cmd --zone=public --add-port=1515/tcp --permanent
+[root@localhost bin]# firewall-cmd --zone=public --add-port=1516/tcp --permanent
+[root@localhost bin]# firewall-cmd --reload
+success
+```
+Tiến hành thêm agent bằng cách nhấn dấu xổ xuống và chọn Agents:
+
+![image](https://user-images.githubusercontent.com/101538840/207831404-7c5fe66d-6d6c-4d54-9a27-944d329331b3.png)
+
+Đối với Windows, cấu hình như bên dưới, lưu ý sử dụng IP của máy đang chạy Wazuh Manager:
+
+![image](https://user-images.githubusercontent.com/101538840/207831695-737a6a9b-3b3f-420c-88ca-25b68fc5cc37.png)
+
+Làm theo hướng dẫn ở bước 4 và bước 5.
