@@ -2,7 +2,7 @@ Table of Contents
 =================
 
     * [Table of Contents](#table-of-contents)
-    * [Cài đặt Wazuh] (#wazuh-installation)
+    * [Cài đặt Wazuh](#wazuh-installation)
 
 ## Cài đặt Wazuh
 
