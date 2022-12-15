@@ -1,6 +1,7 @@
 # Wazuh
 
 * [Cài đặt Wazuh](#installation)
+* [Thêm agents vào Wazuh](#agentadding)
 
 
 ## Cài đặt Wazuh
