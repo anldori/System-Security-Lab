@@ -95,6 +95,88 @@ Mở port Wazuh API trên Wazuh Manager:
 success
 ```
 
+Trên máy cài đặt Splunk, tiến hành tải các file cấu hình:
+
+```
+curl -so /opt/splunk/etc/system/local/indexes.conf https://raw.githubusercontent.com/wazuh/wazuh-splunk/v4.3.10-8.2.8/setup/indexer/indexes.conf
+curl -so /opt/splunk/etc/system/local/inputs.conf https://raw.githubusercontent.com/wazuh/wazuh-splunk/v4.3.10-8.2.8/setup/indexer/inputs.conf
+```
+
+Sửa file cấu hình, thêm các dòng sau:
+
+```
+nano /opt/splunk/etc/system/local/inputs.conf
+
+[SSL]
+serverCert = $SPLUNK_HOME/etc/auth/server.pem
+sslPassword = password
+```
+
+Khởi động lại Splunk:
+
+```
+/opt/splunk/bin/splunk restart
+```
+
+Trên máy Wazuh Manager, tiến hành tải và cài đặt Splunk Forwarder từ trang chủ.
+
+Tải các file cấu hình và cấu hình chúng:
+
+```
+curl -so /opt/splunkforwarder/etc/system/local/props.conf https://raw.githubusercontent.com/wazuh/wazuh-splunk/v4.3.10-8.2.8/setup/forwarder/props.conf
+curl -so /opt/splunkforwarder/etc/system/local/inputs.conf https://raw.githubusercontent.com/wazuh/wazuh-splunk/v4.3.10-8.2.8/setup/forwarder/inputs.conf
+sed -i "s:MANAGER_HOSTNAME:$(hostname):g" /opt/splunkforwarder/etc/system/local/inputs.conf
+```
+
+Tạo file cấu hình để chuyển log về Splunk có nội dung sau, với `192.168.182.143` là IP của máy Splunk:
+
+```
+nano /opt/splunkforwarder/etc/system/local/outputs.conf
+
+[tcpout]
+defaultGroup = default-autolb-group
+
+[tcpout:default-autolb-group]
+server = 192.168.182.143:9997
+clientCert = /opt/splunkforwarder/etc/auth/server.pem
+sslRootCAPath = /opt/splunkforwarder/etc/auth/ca.pem
+sslPassword = password
+
+[tcpout-server://192.168.182.143:9997]
+```
+
+Khởi động lại Splunk Forwarder:
+
+```
+/opt/splunkforwarder/bin/splunk start
+```
+
+Trên máy Splunk, tiến hành cài đặt app Wazuh:
+
+```
+curl -o SplunkAppForWazuh.tar.gz https://packages.wazuh.com/4.x/ui/splunk/wazuh_splunk-4.3.10_8.2.8-1.tar.gz
+/opt/splunk/bin/splunk install app SplunkAppForWazuh.tar.gz
+```
+
+Khởi động lại Splunk và Splunk Forwarder trên 2 thiết bị.
+
+Truy cập địa chỉ máy Splunk với port 8000, nhấn vào app Wazuh.
+
+![image](https://user-images.githubusercontent.com/101538840/208015597-488bbcb5-5b70-40db-bf77-df2b2d724653.png)
+
+
+Tiến hành thêm các thông tin để kết nối với Wazuh API:
+
+![image](https://user-images.githubusercontent.com/101538840/208015874-a1aecb15-0582-4934-aa11-d401dfa24f6c.png)
+
+Trong đó:
+
+    - Username, Password: Sử dụng user wazuh-wui để đăng nhập.
+    - Url: https://192.168.182.142
+    - Port: 55000
+    
+Nhấn Save.    
+
 Chuyển qua tab Agent, ta thấy Splunk đã nhận log từ Wazuh:
 
 ![image](https://user-images.githubusercontent.com/101538840/208013273-cc061f1b-1a9a-4e89-a51d-ef12b31e79dc.png)
