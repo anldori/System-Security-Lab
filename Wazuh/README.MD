@@ -1,5 +1,11 @@
 # Wazuh
 
+Wazuh Manager + Dashboard: CentOS 7 - 192.168.182.142
+
+Splunk: Ubuntu 18.04 Server - 192.168.182.143
+
+Agent: Windows 10 - 192.168.182.1
+
 ## Table of Contents
 
 * [Cài đặt Wazuh](#installation)
