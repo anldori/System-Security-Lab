@@ -6,6 +6,8 @@ Splunk: Ubuntu 18.04 Server - 192.168.182.143
 
 Agent: Windows 10 - 192.168.182.1
 
+Wazuh Architecture: https://documentation.wazuh.com/current/getting-started/architecture.html
+
 ## Table of Contents
 
 * [Cài đặt Wazuh](#installation)
@@ -84,6 +86,14 @@ https://documentation.wazuh.com/current/deployment-options/splunk/splunk-basic.h
 https://documentation.wazuh.com/current/deployment-options/splunk/splunk-app.html
 
 ----------------------------------------------------------------------------------
+
+Mở port Wazuh API trên Wazuh Manager: 
+
+```sh
+[root@localhost bin]# firewall-cmd --zone=public --add-port=55000/tcp --permanent
+[root@localhost bin]# firewall-cmd --reload
+success
+```
 
 Chuyển qua tab Agent, ta thấy Splunk đã nhận log từ Wazuh:
 
