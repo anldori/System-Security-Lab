@@ -10,6 +10,7 @@ Agent: Windows 10 - 192.168.182.1
 
 * [Cài đặt Wazuh](#installation)
 * [Thêm agents vào Wazuh](#agent_adding)
+* [Cấu hình Wazuh đổ log về Splunk](#wazuh_to_splunk)
 
 <a name="installation"></a>
 ## Cài đặt Wazuh
@@ -74,6 +75,7 @@ Quay trở lại menu Agents, ta thấy đã thêm agent mới thành công:
 ![image](https://user-images.githubusercontent.com/101538840/207864082-f2e2f41f-e9b0-49f3-bedf-fbc4dd359f49.png)
 
 
+<a name="wazuh_to_splunk"></a>
 ## Cấu hình Wazuh đổ log về Splunk
 
 Reference: 
