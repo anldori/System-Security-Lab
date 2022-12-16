@@ -77,6 +77,7 @@ Quay trở lại menu Agents, ta thấy đã thêm agent mới thành công:
 ## Cấu hình Wazuh đổ log về Splunk
 
 Reference: 
+
 https://documentation.wazuh.com/current/deployment-options/splunk/splunk-basic.html
 https://documentation.wazuh.com/current/deployment-options/splunk/splunk-app.html
 
