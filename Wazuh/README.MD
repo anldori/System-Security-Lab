@@ -73,3 +73,15 @@ Quay trở lại menu Agents, ta thấy đã thêm agent mới thành công:
 
 ![image](https://user-images.githubusercontent.com/101538840/207864082-f2e2f41f-e9b0-49f3-bedf-fbc4dd359f49.png)
 
+
+## Cấu hình Wazuh đổ log về Splunk
+
+Reference: 
+https://documentation.wazuh.com/current/deployment-options/splunk/splunk-basic.html
+https://documentation.wazuh.com/current/deployment-options/splunk/splunk-app.html
+
+----------------------------------------------------------------------------------
+
+Chuyển qua tab Agent, ta thấy Splunk đã nhận log từ Wazuh:
+
+![image](https://user-images.githubusercontent.com/101538840/208013273-cc061f1b-1a9a-4e89-a51d-ef12b31e79dc.png)
