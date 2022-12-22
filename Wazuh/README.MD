@@ -83,6 +83,7 @@ Quay trở lại menu Agents, ta thấy đã thêm agent mới thành công:
 Reference: 
 
 https://documentation.wazuh.com/current/deployment-options/splunk/splunk-basic.html
+
 https://documentation.wazuh.com/current/deployment-options/splunk/splunk-app.html
 
 ----------------------------------------------------------------------------------
