@@ -11,11 +11,8 @@ Wazuh Architecture: https://documentation.wazuh.com/current/getting-started/arch
 ## Table of Contents
 
   - [Cài đặt Wazuh](#Cài-đặt-Wazuh)
-  - [Install chaincode](#install-chaincode)
-  - [Working with chaincode](#Working-with-chaincode)
-  - [Chaincode development](#chaincode-development)
-  - [Known issues](#known-issues)
-  - [Contact infomation](#contact-information)
+  - [Thêm agents vào Wazuh](#Thêm-agents-vào-Wazuh)
+  - [Cấu hình Wazuh đổ log về Splunk](#Cấu-hình-Wazuh-đổ-log-về-Splunk)
 
 ## Cài đặt Wazuh
 
@@ -51,7 +48,6 @@ Truy cập trang dashboard của Wazuh và đăng nhập với username, passwor
 
 ![image](https://user-images.githubusercontent.com/101538840/207830677-342b485c-3712-4035-a3cc-e239ebfbf2c8.png)
 
-<a name="agent_adding"></a>
 ## Thêm agents vào Wazuh
 
 Mở các port cần thiết cho Wazuh Manager:
@@ -79,7 +75,6 @@ Quay trở lại menu Agents, ta thấy đã thêm agent mới thành công:
 ![image](https://user-images.githubusercontent.com/101538840/207864082-f2e2f41f-e9b0-49f3-bedf-fbc4dd359f49.png)
 
 
-<a name="wazuh_to_splunk"></a>
 ## Cấu hình Wazuh đổ log về Splunk
 
 Reference: 
