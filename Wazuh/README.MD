@@ -10,11 +10,13 @@ Wazuh Architecture: https://documentation.wazuh.com/current/getting-started/arch
 
 ## Table of Contents
 
-* [Cài đặt Wazuh](#installation)
-* [Thêm agents vào Wazuh](#agent_adding)
-* [Cấu hình Wazuh đổ log về Splunk](#wazuh_to_splunk)
+  - [Cài đặt Wazuh](#Cài-đặt-Wazuh)
+  - [Install chaincode](#install-chaincode)
+  - [Working with chaincode](#Working-with-chaincode)
+  - [Chaincode development](#chaincode-development)
+  - [Known issues](#known-issues)
+  - [Contact infomation](#contact-information)
 
-<a name="installation"></a>
 ## Cài đặt Wazuh
 
 ```sh
