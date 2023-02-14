@@ -47,3 +47,11 @@ success
 [root@localhost bin]# firewall-cmd --reload
 success
 ```
+
+Truy cập địa chỉ portal Splunk với port 8000:
+![image](https://user-images.githubusercontent.com/101538840/218659344-843a0d7c-60b7-495b-ac68-661024734be6.png)
+
+Đăng nhập với tài khoản và mật khẩu đã tạo ở bước cài đặt. Giao diện trang chủ của Splunk:
+![image](https://user-images.githubusercontent.com/101538840/218660247-f99303a6-9ca6-4385-b596-40c74e5acdd4.png)
+
+
