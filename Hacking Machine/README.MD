@@ -1,6 +1,6 @@
 # Building own hacking machine and hacking tools
 
-OS: Ubuntu Server 18.04
+OS: Ubuntu Server 20.04 and upper
 
 ## Table of contents
 - [Golang](#Golang)
