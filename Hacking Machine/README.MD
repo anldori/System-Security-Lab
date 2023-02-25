@@ -5,6 +5,9 @@ OS: Ubuntu Server 18.04
 ## Table of contents
 - [Wordlist](#Wordlist)
 - [Web Reconnaissance](#Web-Reconnaissance)
+  - [Whatweb](#Whatweb)
+  - [Nikto](#Nikto)
+  - [TestSSL](#WTestSSL)
   - [FFUF](#FFUF)
 
 ## Wordlist
@@ -16,6 +19,24 @@ hacker@ubuntu:~/wordlists$ gunzip rockyou.txt.gz
 ```
 
 ## Web Reconnaissance
+
+### Whatweb
+
+```console
+hacker@ubuntu:~/tools/ffuf$ sudo apt install whatweb
+```
+
+### Nikto
+
+```console
+hacker@ubuntu:~/tools$ git clone https://github.com/sullo/nikto
+```
+
+### TestSSL
+
+```console
+hacker@ubuntu:~/tools$ sudo apt install testssl.sh
+```
 
 ### FFUF
 
