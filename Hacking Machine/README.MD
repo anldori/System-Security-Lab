@@ -9,7 +9,7 @@ OS: Ubuntu Server 18.04
 
 ## Wordlist
 
-```sh
+```console
 hacker@ubuntu:~/wordlists$ git clone https://github.com/3ndG4me/KaliLists
 hacker@ubuntu:~/wordlists$ mv KaliLists/* .
 hacker@ubuntu:~/wordlists$ gunzip rockyou.txt.gz
@@ -19,7 +19,7 @@ hacker@ubuntu:~/wordlists$ gunzip rockyou.txt.gz
 
 ### FFUF
 
-```sh
+```console
 hacker@ubuntu:~/tools/ffuf$ wget https://github.com/ffuf/ffuf/releases/download/v2.0.0/ffuf_2.0.0_linux_amd64.tar.gz
 hacker@ubuntu:~/tools/ffuf$ tar -xf ffuf_2.0.0_linux_amd64.tar.gz
 ```
