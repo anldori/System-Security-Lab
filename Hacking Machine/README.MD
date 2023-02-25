@@ -1,4 +1,4 @@
-# Building own hacking machine and hacking tools
+# Building your own hacking machine and hacking tools
 
 OS: Ubuntu Server 20.04 and upper
 
