@@ -6,6 +6,8 @@ OS: Ubuntu Server 20.04 and upper
 - [Golang](#Golang)
 - [Wordlist](#Wordlist)
 - [Host Reconnaissance](#Host-Reconnaissance)
+  - [Nmap](#Nmap)
+  - [Rustscan](#Rustscan)
 - [Web Reconnaissance](#Web-Reconnaissance)
   - [Whatweb](#Whatweb)
   - [Nikto](#Nikto)
