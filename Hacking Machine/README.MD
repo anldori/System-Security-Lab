@@ -9,6 +9,8 @@ OS: Ubuntu Server 18.04
   - [Nikto](#Nikto)
   - [TestSSL](#WTestSSL)
   - [FFUF](#FFUF)
+- Exploitation(#Exploitation)
+  - [Searchsploit](#Searchsploit)
 
 ## Wordlist
 
@@ -45,3 +47,9 @@ hacker@ubuntu:~/tools/ffuf$ wget https://github.com/ffuf/ffuf/releases/download/
 hacker@ubuntu:~/tools/ffuf$ tar -xf ffuf_2.0.0_linux_amd64.tar.gz
 ```
 
+## Exploitation
+### Searchsploit
+
+```console
+hacker@ubuntu:~/tools$ sudo snap install searchsploit
+```
