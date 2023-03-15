@@ -68,6 +68,8 @@ Download itop: https://sourceforge.net/projects/itop/files/latest/download
 
 Giải nén file zip vừa tải xuống, copy toàn bộ file trong thư mục `web` vào thư mục `itop` vừa tạo ở trên:
 ```console
+[root@localhost itop]# pwd
+/var/www/html/itop
 [root@localhost itop]# ls -la
 total 1100
 drwxr-xr-x 23 root root    4096 Mar 15 04:06 .
