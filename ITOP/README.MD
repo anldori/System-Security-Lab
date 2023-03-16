@@ -108,7 +108,6 @@ Cấp quyền cho user Apache:
 ```
 
 Cài đặt các extensions cần thiết:
-
 ```console
 [root@localhost itop]# yum install php-dom -y
 [root@localhost itop]# yum install php-soap -y
@@ -116,14 +115,22 @@ Cài đặt các extensions cần thiết:
 ```
 
 Khởi động lại dịch vụ httpd:
-
 ```console
 [root@localhost ~]# systemctl restart httpd
+```
+
+Cài đặt graphviz:
+```console
+[root@localhost ~]# yum install graphviz -y
 ```
 
 Truy cập địa chỉ web server với URI `itop`:
 
 ![image](https://user-images.githubusercontent.com/101538840/225247291-0c6466d0-7954-4f4a-a2d8-f5153c737e7a.png)
+
+Tiến hành cấu hình theo chỉ dẫn của itop. Giao diện khi đăng nhập vào portal:
+![image](https://user-images.githubusercontent.com/101538840/225509714-789650f8-610e-420d-8b41-48937cc78115.png)
+
 
 
 
