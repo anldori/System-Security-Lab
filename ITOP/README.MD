@@ -3,15 +3,22 @@
 Server: CentOS 7
 
 ## Table of Contents
+
 - [Chuẩn bị](#Chuẩn-bị)
 - [LAMP Stack](#LAMP-Stack)
 - [Cấu hình và cài đặt](#Cấu-hình-và-cài-đặt)
 
 ### Chuẩn bị
-Tắt Firewall và disable Selinux:
+
+Cập nhật CentOS:
 ```console
-[root@localhost ~]# systemctl stop firewalld
-[root@localhost ~]# systemctl disable firewalld
+[root@localhost ~]# yum update -y
+```
+
+Mở port 80 và disable Selinux:
+```console
+[root@localhost ~]# firewall-cmd --zone=public --add-port=80/tcp --permanent
+[root@localhost ~]# firewall-cmd --reload
 [root@localhost ~]# vi /etc/selinux/config
 SELINUX=disabled
 [root@localhost ~]# reboot
@@ -25,10 +32,10 @@ Cài đặt Apache HTTP:
 [root@localhost ~]# systemctl enable httpd
 ```
 
-Cài đặt MySQL Server:
+Cài đặt MySQL Server 5.7:
 
 ```console
-[root@localhost ~]# yum group install "Development Tools"
+[root@localhost ~]# yum group install "Development Tools" -y
 [root@localhost ~]# rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 [root@localhost ~]# yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 [root@localhost ~]# yum install mysql-community-server -y
@@ -40,10 +47,9 @@ Cài đặt MySQL Server:
 
 Cài đặt PHP 7.3:
 ```console
+[root@localhost ~]# yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 [root@localhost ~]# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-[root@localhost ~]# yum install yum-utils
-[root@localhost ~]# yum-config-manager ––enable remi–php73
-[root@localhost ~]# yum install php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo -y
+[root@localhost ~]# yum --enablerepo=remi-php73 install php
 [root@localhost ~]# php -v
 PHP 7.3.33 (cli) (built: Feb 14 2023 14:41:46) ( NTS )
 ```
@@ -52,8 +58,8 @@ PHP 7.3.33 (cli) (built: Feb 14 2023 14:41:46) ( NTS )
 
 Cấp quyền cho database:
 ```console
-[root@localhost ~]# mysql -u root
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'iTop'@'%' IDENTIFIED BY 'some_password';
+[root@localhost ~]# mysql -u root -p
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'iTop'@'%' IDENTIFIED BY 'P@ssword123';
 Query OK, 0 rows affected (0.00 sec)
 
 mysql> FLUSH PRIVILEGES;
@@ -111,9 +117,7 @@ Cấp quyền cho user Apache:
 
 Cài đặt các extensions cần thiết:
 ```console
-[root@localhost itop]# yum install php-dom -y
-[root@localhost itop]# yum install php-soap -y
-[root@localhost itop]# yum install php-mbstring -y
+[root@localhost itop]# yum --enablerepo=remi-php73 install php-xml php-soap php-xmlrpc php-mbstring php-json php-gd php-mcrypt php-mysqli php-zip -y
 ```
 
 Khởi động lại dịch vụ httpd:
@@ -129,6 +133,22 @@ Cài đặt graphviz:
 Truy cập địa chỉ web server với URI `itop`:
 
 ![image](https://user-images.githubusercontent.com/101538840/225247291-0c6466d0-7954-4f4a-a2d8-f5153c737e7a.png)
+
+Đồng ý các điều khoản, tiếp tục cấu hình credential cho database:
+![image](https://user-images.githubusercontent.com/101538840/225513770-61515396-a8f3-4f2b-bc91-9380217c0c73.png)
+
+Lựa chọn database rỗng cho môi trường production:
+![image](https://user-images.githubusercontent.com/101538840/225513894-f4514f94-c366-4e23-8139-43c39d2ba45c.png)
+
+Chọn các thiết bị cần quản lý:
+![image](https://user-images.githubusercontent.com/101538840/225514140-7caec8ca-4270-45ad-9f3d-5efbb42fbc06.png)
+
+Lựa chọn theo mô hình Enterprise hoặc Service Provider sao cho phù hợp với nhu cầu:
+![image](https://user-images.githubusercontent.com/101538840/225515196-7d385fef-a11c-467d-8128-d2698480716c.png)
+
+Chọn hệ thống quản lý ticket chuẩn ITIL:
+![image](https://user-images.githubusercontent.com/101538840/225515349-e653d356-87f9-4660-8a00-26410e8fb7c0.png)
+![image](https://user-images.githubusercontent.com/101538840/225515380-2c684266-70d3-4f1b-958d-e0d5713f2e0a.png)
 
 Tiến hành cấu hình theo chỉ dẫn của itop. Giao diện khi đăng nhập vào portal:
 ![image](https://user-images.githubusercontent.com/101538840/225509714-789650f8-610e-420d-8b41-48937cc78115.png)
