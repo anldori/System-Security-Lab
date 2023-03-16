@@ -28,12 +28,14 @@ Cài đặt Apache HTTP:
 Cài đặt MySQL Server:
 
 ```console
-[root@localhost ~]# wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
-[root@localhost ~]# rpm -ivh mysql-community-release-el7-5.noarch.rpm
-[root@localhost ~]# yum install mysql-server -y
-[root@localhost ~]# systemctl start mysqld
+[root@localhost ~]# yum group install "Development Tools"
+[root@localhost ~]# rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+[root@localhost ~]# yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+[root@localhost ~]# yum install mysql-community-server -y
 [root@localhost ~]# systemctl enable mysqld
-[root@localhost ~]# mysql_secure_installation
+[root@localhost ~]# systemctl start mysqld
+[root@localhost ~]# grep "A temporary password" /var/log/mysqld.log
+[root@localhost ~]# mysql_secure_installation -u root -p
 ```
 
 Cài đặt PHP 7.3:
