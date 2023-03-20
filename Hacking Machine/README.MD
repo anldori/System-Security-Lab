@@ -53,7 +53,7 @@ hacker@ubuntu:~$ sudo dpkg -i rustscan_2.0.1_amd64.deb
 ### Whatweb
 
 ```console
-hacker@ubuntu:~/tools/ffuf$ sudo apt install whatweb
+hacker@ubuntu:~$ sudo apt install whatweb
 ```
 
 ### Nikto
@@ -63,7 +63,7 @@ hacker@ubuntu:~/tools$ git clone https://github.com/sullo/nikto
 
 ### TestSSL
 ```console
-hacker@ubuntu:~/tools$ sudo apt install testssl.sh
+hacker@ubuntu:~$ sudo apt install testssl.sh
 ```
 
 ### FFUF
