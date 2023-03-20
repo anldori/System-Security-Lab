@@ -39,7 +39,7 @@ hacker@ubuntu:~/wordlists$ gunzip rockyou.txt.gz
 
 ### Nmap
 ```console
-hacker@ubuntu:~/tools/ffuf$ sudo apt install nmap
+hacker@ubuntu:~$ sudo apt install nmap
 ```
 
 ### Rustscan
