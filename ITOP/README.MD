@@ -4,6 +4,9 @@ Sever: Ubuntu Server 20.04
 
 Ip address: 172.10.1.79
 
+System requirements:
+![image](https://user-images.githubusercontent.com/101538840/231099317-6dd77903-1874-4478-99cb-c23023830e9c.png)
+
 # Table of Contents
 - [Install LAMP Stack](#Install-LAMP-Stack)
 - [Setup web directory](#Setup-web-directory)
