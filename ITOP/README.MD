@@ -4,6 +4,11 @@ Sever: Ubuntu Server 20.04
 
 Ip address: 172.10.1.79
 
+# Table of Contents
+- [Install LAMP Stack](#Install-LAMP-Stack)
+- [Setup web directory](#Setup-web-directory)
+- [Setup iTop](#Setup-iTop)
+
 # Install LAMP Stack
 
 
