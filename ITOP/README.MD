@@ -47,7 +47,7 @@ Query OK, 0 rows affected (0.00 sec)
 mysql> quit;
 Bye
 
-root@ubuntuserver:~# nano /etc/mysql/mysql.conf.d/mysqld.cnf\
+root@ubuntuserver:~# nano /etc/mysql/mysql.conf.d/mysqld.cnf
 
 [mysqld]
 max_allowed_packet = 50M 
@@ -92,10 +92,3 @@ Go to homepage: http://172.10.1.79/
 Set the credential to database connection:
 
 ![image](https://user-images.githubusercontent.com/101538840/231047924-8ebb84a5-dc99-43db-9a70-941ed38b4576.png)
-
-
-
-
-
-
-
