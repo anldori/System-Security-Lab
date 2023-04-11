@@ -1,6 +1,7 @@
 # ITOP ITSM CMDB
 
 Sever: Ubuntu Server 20.04
+
 Ip address: 172.10.1.79
 
 # Install LAMP Stack
