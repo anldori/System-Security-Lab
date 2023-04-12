@@ -66,7 +66,7 @@ root@ubuntuserver:~# systemctl restart mysql.service
 Configure PHP:
 
 ```console
-root@ubuntuserver:~# nano /etc/php/8.2/cli/php.ini
+root@ubuntuserver:~# nano /etc/php/8.2/apache2/php.ini
 
 file_uploads = On 
 upload_max_filesize = 20M
