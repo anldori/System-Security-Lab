@@ -1,7 +1,10 @@
+echo 'UPDATE & UPGRADE PACKAGES'
+echo '--------------------'
+sudo apt update && sudo apt upgrade -y
+
 echo 'INSTALLING LAMPSTACK'
 echo '--------------------'
 echo 'Installing Apache 2...'
-sudo apt update && sudo apt upgrade -y
 sudo apt install apache2 -y && systemctl enable apache2 && systemctl start apache2
 echo 'Done.'
 echo
