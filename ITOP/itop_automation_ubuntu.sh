@@ -2,12 +2,17 @@ echo 'UPDATE & UPGRADE PACKAGES'
 echo '--------------------'
 sudo apt -qq update && sudo apt -qq upgrade -y
 
+clear
+
 echo 'INSTALLING LAMPSTACK'
 echo '--------------------'
 echo 'Installing Apache 2...'
 sudo apt -qq install apache2 -y && systemctl enable apache2 && systemctl start apache2
 echo 'Done.'
 echo
+
+clear
+
 echo 'Installing PHP 8.2 and its extensions...'
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt -qq install php php-mysql php-ldap php-mcrypt php-cli php-soap php-json graphviz -y
@@ -15,10 +20,15 @@ sudo apt -qq install php-xml php-gd php-zip php-mbstring php-curl libapache2-mod
 sudo apt -qq install php-bz2 php-sqlite3 -y
 echo 'Done.'
 echo
+
+clear
+
 echo 'Installing MySQL...'
 sudo apt -qq install mysql-server mysql-client -y
 echo 'Done.'
 systemctl restart apache2
+
+clear
 
 echo 'Setup Database'
 sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SetRootPasswordHere';"
