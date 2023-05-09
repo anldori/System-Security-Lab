@@ -17,7 +17,7 @@ echo 'Installing PHP 8.2 and its extensions...'
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt -qq install php php-mysql php-ldap php-mcrypt php-cli php-soap php-json graphviz -y
 sudo apt -qq install php-xml php-gd php-zip php-mbstring php-curl libapache2-mod-php -y
-sudo apt -qq install php-bz2 php-sqlite3 -y
+sudo apt -qq install php-bz2 php-sqlite3 php-bcmath -y
 echo 'Done.'
 echo
 
