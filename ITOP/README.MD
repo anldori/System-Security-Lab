@@ -18,7 +18,7 @@ System requirements: https://www.itophub.io/wiki/page?id=3_0_0:install:requireme
 root@ubuntuserver:~# sudo apt install apache2 -y && systemctl enable apache2 && systemctl start apache2
 root@ubuntuserver:~# sudo add-apt-repository ppa:ondrej/php -y
 root@ubuntuserver:~# sudo apt-get install php php-mysql php-ldap php-mcrypt php-cli php-soap php-json graphviz -y
-root@ubuntuserver:~# sudo apt-get install php-xml php-gd php-zip php-mbstring php-curl libapache2-mod-php -y
+root@ubuntuserver:~# sudo apt-get install php-xml php-gd php-zip php-mbstring php-curl php-soap libapache2-mod-php -y
 root@ubuntuserver:~# sudo apt install php-bz2 php-sqlite3 -y
 root@ubuntuserver:~# sudo apt-get install mysql-server mysql-client -y
 root@ubuntuserver:~# systemctl restart apache2
