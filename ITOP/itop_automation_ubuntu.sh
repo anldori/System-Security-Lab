@@ -1,6 +1,6 @@
-echo 'UPDATE & UPGRADE PACKAGES'
+echo 'UPDATE PACKAGES'
 echo '--------------------'
-sudo apt -qq update && sudo apt -qq upgrade -y
+sudo apt update
 
 clear
 
