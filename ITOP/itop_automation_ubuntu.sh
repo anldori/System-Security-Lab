@@ -15,7 +15,7 @@ clear
 
 echo 'Installing PHP 8.2 and its extensions...'
 sudo add-apt-repository ppa:ondrej/php -y
-sudo apt -qq install php  php8.0-mysql  php8.0-ldap php8.0-mcrypt php8.0-cli php8.0-soap php8.0-json graphviz -y
+sudo apt -qq install php  php8.0-mysql  php8.0-ldap php8.0-mcrypt php8.0-cli php8.0-soap graphviz -y
 sudo apt -qq install  php8.0-xml php8.0-gd  php8.0-zip  php8.0-mbstring  php8.0-curl libapache2-mod-php -y
 sudo apt -qq install  php8.0-bz2 php8.0-sqlite3 php8.0-bcmath -y
 echo 'Done.'
