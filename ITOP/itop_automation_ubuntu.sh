@@ -8,12 +8,14 @@ clear
 echo 'INSTALLING LAMPSTACK'
 echo '--------------------'
 echo 'Installing Apache 2...'
-sudo apt -qq install apache2 -y && systemctl enable apache2 && systemctl start apache2
+sudo apt install apache2 -y && systemctl enable apache2 && systemctl start apache2
 echo 'Done.'
 echo
 
 clear
 
+echo 'INSTALLING LAMPSTACK'
+echo '--------------------'
 echo 'Installing PHP 8.0 and its extensions...'
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt install php8.0 php8.0-mysql php8.0-ldap php8.0-mcrypt php8.0-cli php8.0-soap graphviz -y
@@ -24,14 +26,17 @@ echo
 
 clear
 
+echo 'INSTALLING LAMPSTACK'
+echo '--------------------'
 echo 'Installing MySQL...'
-sudo apt -qq install mysql-server mysql-client -y
+sudo apt install mysql-server mysql-client -y
 echo 'Done.'
 systemctl restart apache2
 
 clear
 
-echo 'Setup Database'
+echo 'Install MySQL completed.'
+echo 'Setting up Database...'
 sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'sxDQjNk9W9Wa';"
 mysql -u root -psxDQjNk9W9Wa -e "create database itop character set utf8 collate utf8_bin;"
 mysql -u root -psxDQjNk9W9Wa -e "create user 'itop'@'%' identified by 'E2MhRcx4yBG2';"
@@ -39,7 +44,7 @@ mysql -u root -psxDQjNk9W9Wa -e "grant all privileges on itop.* to 'itop'@'%';"
 mysql -u root -psxDQjNk9W9Wa -e "GRANT RELOAD,PROCESS ON *.* TO 'itop'@'%';"
 mysql -u root -psxDQjNk9W9Wa -e "flush privileges;"
 
-echo 'Setup Database completely.'
+echo 'Setting up database completely.'
 echo
 
 echo 'Setup Web Directory'
