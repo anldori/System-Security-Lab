@@ -1,9 +1,7 @@
 clear
 echo 'UPDATE PACKAGES'
 echo '--------------------'
-sudo apt update
-
-clear
+sudo apt -qq update
 
 echo 'INSTALLING LAMPSTACK'
 echo '--------------------'
