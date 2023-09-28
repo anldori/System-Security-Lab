@@ -1,7 +1,7 @@
 # Xây dựng hệ thống VPN đơn giản để truy cập từ nhà đến văn phòng
 
 ## Table of Contents
-  - [Chuẩn bị](#Chuẩn-bị)
+  - [Yêu cầu](#Yêu-cầu)
   - [Các bước thực hiện](#Các-bước-thực-hiện)
     - [Cài đặt Ngrok](#Cài-đặt-Ngrok)
     - [Cài đặt OpenVPN Server](#Cài-đặt-OpenVPN-Server)
