@@ -4,6 +4,7 @@
   - [Yêu cầu](#Yêu-cầu)
   - [Các bước thực hiện](#Các-bước-thực-hiện)
     - [Cài đặt Ngrok](#Cài-đặt-Ngrok)
+    - [Cấu hình firewall và forwarding](#Cấu-hình-firewall-và-forwarding)
     - [Cài đặt OpenVPN Server](#Cài-đặt-OpenVPN-Server)
 
 ## Yêu cầu
@@ -46,5 +47,12 @@ Như vậy, thông tin cấu hình cho OpenVPN server:
 Host: 0.tcp.ap.ngrok.io
 Port: 19032
 ```
+### Cấu hình firewall và forwarding
 
+Thực hiện enable firewall và allow port 1999:
+
+```console
+sudo ufw enable
+sudo ufw allow 1999/tcp
+```
 ### Cài đặt OpenVPN Server
