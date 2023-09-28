@@ -1,4 +1,4 @@
-# Xây dựng hệ thống VPN đơn giản để truy cập từ nhà đến văn phòng
+# Xây dựng VPN đơn giản để truy cập từ nhà đến văn phòng
 
 ## Table of Contents
   - [Yêu cầu](#Yêu-cầu)
