@@ -47,6 +47,7 @@ Như vậy, thông tin cấu hình cho OpenVPN server:
 Host: 0.tcp.ap.ngrok.io
 Port: 19032
 ```
+
 ### Cấu hình firewall và forwarding
 
 Thực hiện enable firewall và allow port 1999:
