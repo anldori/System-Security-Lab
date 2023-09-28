@@ -28,7 +28,7 @@ ngrok tcp 1999
 
 Kết quả sau khi public:
 ```
-ngrok                                                                      (Ctrl+C to quit)
+ngrok                       (Ctrl+C to quit)
 Session Status                online                                                                                                
 Account                       An Duy Le (Plan: Free)                                                                                
 Update                        update available (version 3.3.5, Ctrl-U to update)                                                    
