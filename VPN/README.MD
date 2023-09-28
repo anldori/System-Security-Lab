@@ -28,18 +28,18 @@ ngrok tcp 1999
 
 Kết quả sau khi public:
 ```
-ngrok                       (Ctrl+C to quit)
-Session Status                online                                                                                                
-Account                       An Duy Le (Plan: Free)                                                                                
-Update                        update available (version 3.3.5, Ctrl-U to update)                                                    
-Version                       3.3.4                                                                                                 
-Region                        Asia Pacific (ap)                                                                                     
-Latency                       21ms                                                                                                  
-Web Interface                 http://127.0.0.1:4040                                                                                 
-Forwarding                    tcp://0.tcp.ap.ngrok.io:19032 -> localhost:1999                                                       
-                                                                                                                                    
-Connections                   ttl     opn     rt1     rt5     p50     p90                                                           
-                              64      0       0.00    0.00    1.77    24.82 
+ngrok                                                (Ctrl+C to quit)
+Session Status                online
+Account                       An Duy Le (Plan: Free)
+Update                        update available (version 3.3.5, Ctrl-U to update)
+Version                       3.3.4
+Region                        Asia Pacific (ap)
+Latency                       21ms
+Web Interface                 http://127.0.0.1:4040
+Forwarding                    tcp://0.tcp.ap.ngrok.io:19032 -> localhost:1999
+                                                                           
+Connections                   ttl     opn     rt1     rt5     p50     p90
+                              64      0       0.00    0.00    1.77    24.82
 ```
 
 ### Cài đặt OpenVPN Server
