@@ -55,4 +55,11 @@ Thực hiện enable firewall và allow port 1999:
 sudo ufw enable
 sudo ufw allow 1999/tcp
 ```
+
+Bật tính năng IP forward:
+
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+sysctl -p
+```
 ### Cài đặt OpenVPN Server
