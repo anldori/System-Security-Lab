@@ -42,4 +42,10 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
                               64      0       0.00    0.00    1.77    24.82
 ```
 
+Như vậy, thông tin cấu hình cho OpenVPN server:
+```
+Host: 0.tcp.ap.ngrok.io
+Port: 19032
+```
+
 ### Cài đặt OpenVPN Server
