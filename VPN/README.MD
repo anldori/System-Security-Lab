@@ -64,3 +64,13 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 sysctl -p
 ```
 ### Cài đặt OpenVPN Server
+
+## Phương pháp 2: Thông qua Zero-Tier
+### Cấu hình IPtables:
+
+Với cổng `$PHY_IFACE` là cổng đi Internet, cổng $ZT_IFACE là cổng mạng ảo của Zero-Tier:
+```
+sudo iptables -t nat -A POSTROUTING -o $PHY_IFACE -j MASQUERADE
+sudo iptables -A FORWARD -i $ZT_IFACE -o $PHY_IFACE -j ACCEPT
+sudo iptables -A FORWARD -i $PHY_IFACE -o $ZT_IFACE -m state --state RELATED,ESTABLISHED -j ACCEPT
+```
