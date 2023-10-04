@@ -68,7 +68,7 @@ sysctl -p
 ## Phương pháp 2: Thông qua Zero-Tier
 ### Cấu hình IPtables:
 
-Với cổng `$PHY_IFACE` là cổng đi Internet, cổng $ZT_IFACE là cổng mạng ảo của Zero-Tier:
+Với cổng `$PHY_IFACE` là cổng đi Internet, cổng `$ZT_IFACE` là cổng mạng ảo của Zero-Tier:
 ```
 sudo iptables -t nat -A POSTROUTING -o $PHY_IFACE -j MASQUERADE
 sudo iptables -A FORWARD -i $ZT_IFACE -o $PHY_IFACE -j ACCEPT
